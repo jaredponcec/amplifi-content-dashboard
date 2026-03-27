@@ -1,0 +1,26 @@
+MASTER CLAUDE CODE PROMPT — PASTE THIS IN AS YOUR FIRST MESSAGE
+================================================================
+
+I'm building an AI-powered Instagram content system for a real estate client named Brian Hymas. The main file is `brian_hymas_content_system.jsx`. Here's what I need you to do:
+
+1. READ `brian_hymas_content_system.jsx` in full
+2. FIX any syntax errors (watch for curly apostrophes inside JSX strings)
+3. WIRE UP the Anthropic API key from `.env` — replace the hardcoded fetch headers with:
+   const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY;
+   Then pass it as: "x-api-key": apiKey in the fetch headers
+4. ADD error handling — if the API call fails, show a friendly error message in the UI
+5. CONFIRM the app runs locally with `npm run dev`
+
+The app has 3 tabs:
+- Weekly Calendar (generates a 7-day content plan, click any day for a full caption)
+- Hook Generator (5 reel title options based on pillar/town/audience)
+- Caption Writer (full ready-to-post caption from a hook input)
+
+The AI system prompt is baked into the JSX file as BRIAN_SYSTEM_PROMPT. Do not change it.
+
+Environment setup:
+- Copy .env.example to .env
+- Add my Anthropic API key to VITE_ANTHROPIC_API_KEY
+- The app uses Vite, React, no external CSS frameworks
+
+Once it's running, confirm what localhost port it's on.
